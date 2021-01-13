@@ -1,4 +1,3 @@
-import { get } from 'core-js/fn/dict'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import * as fb from '../firebase'
