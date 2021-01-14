@@ -30,37 +30,37 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from 'vuex';
 
 export default {
   data() {
     return {
       name: '',
       title: '',
-      showSuccess = false
-    }
+      showSuccess: false,
+    };
   },
   computed: {
-    ...mapState(['userProfile'])
+    ...mapState(['userProfile']),
   },
   methods: {
     updateUserProfile() {
       this.$store.dispatch('updateUserProfile', {
         name: this.name !== '' ? this.name : this.userProfile.name,
-        title: this.title !== '' ? this.title : this.userProfile.title
-      })
+        title: this.title !== '' ? this.title : this.userProfile.title,
+      });
 
-      this.name = ''
-      this.title = ''
+      this.name = '';
+      this.title = '';
 
-      this.showSuccess = true
+      this.showSuccess = true;
 
       setTimeout(() => {
-        this.showSuccess = false
-      }, 2000)
-    }
-  }
-}
+        this.showSuccess = false;
+      }, 2000);
+    },
+  },
+};
 </script>
 
 <style>

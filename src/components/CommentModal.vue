@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { commentsCollection, postCollection, auth } from '@/firebase';
+import { commentsCollection, postsCollection, auth } from '@/firebase';
 
 export default {
   props: ['post'],
@@ -33,7 +33,7 @@ export default {
         userName: this.$store.state.userProfile.name,
       });
 
-      await postCollection.doc(this.post.id).update({
+      await postsCollection.doc(this.post.id).update({
         comments: parseInt(this.post.comments) + 1,
       });
 
