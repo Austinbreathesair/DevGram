@@ -109,7 +109,7 @@ const store = new Vuex.Store({
         })
       })
 
-      const postDocs = await fb.postCollection.where('userId', '==', userId).get()
+      const commentDocs = await fb.postCollection.where('userId', '==', userId).get()
       commentDocs.forEach(doc => {
         fb.commentsCollection.doc(doc.id).update({
           userName: user.name

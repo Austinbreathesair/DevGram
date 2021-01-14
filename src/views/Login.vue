@@ -9,7 +9,8 @@
       </div>
       <div :class="{ 'signupForm': !showLoginForm }"
            class="col2">
-        <form>
+        <form v-if="showLoginForm"
+              @submit.prevent>
           <h1>Welcome Back</h1>
           <div>
             <label for="email">Email</label>
