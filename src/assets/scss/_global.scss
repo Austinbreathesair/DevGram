@@ -1,7 +1,7 @@
 // imports
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 // colors
-$primary: #b230ee;
+$primary: #30a0ee;
 $error: #ef5777;
 $success: #1abc9c;
 $light: #f5f8fa;
@@ -13,7 +13,9 @@ $white: #fff;
 body {
   margin: 0;
   color: $dark;
-  background: #2b2b2c;
+  background: #b993d6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b993d6, #8ca6db); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b993d6, #8ca6db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 html {
@@ -92,6 +94,7 @@ section {
   flex-grow: 1;
   flex-basis: 0;
   padding: 1rem;
+  border-radius: 20px;
   @media screen and (max-width: 742px) {
   }
 }
@@ -131,7 +134,10 @@ section {
 }
 
 .button {
-  background: $primary;
+  background: #b993d6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8ca6db, #b993d6); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8ca6db, #b993d6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   border: 0;
   outline: 0;
   color: $white;
@@ -142,7 +148,9 @@ section {
   cursor: pointer;
 
   &:hover {
-    background: lighten($primary, 5%);
+    background: #b993d6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #8ca6db, #b993d6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #8ca6db, #b993d6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
   &:disabled {

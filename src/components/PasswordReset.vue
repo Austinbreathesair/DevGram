@@ -2,7 +2,9 @@
   <div class="modal">
     <div class="modal-content">
       <div @click="$emit('close')"
-           class="close">Close</div>
+           class="close">
+        <strong>X</strong>
+      </div>
       <h3>Reset Password</h3>
       <div v-if="!showSuccess">
         <p>Enter your email address to reset your password</p>
@@ -14,7 +16,7 @@
         <p v-if="errorMsg !== ''"
            class="error">{{errorMsg}}</p>
         <button @click="resetPassword()"
-                class="button">Reset</button>
+                class="button">Reset Password</button>
       </div>
       <p v-else>Success! Check your email for the reset link.</p>
     </div>

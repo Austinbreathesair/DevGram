@@ -17,6 +17,7 @@
             <input v-model="loginForm.email"
                    type="text"
                    placeholder="your@email.com"
+                   required
                    id="email" />
           </div>
           <div>
@@ -24,13 +25,14 @@
             <input v-model="loginForm.password"
                    type="password"
                    placeholder="*******"
+                   required
                    id="password1" />
           </div>
           <button @click="login()"
                   class="button">Log In</button>
           <div class="extras">
-            <a>Forgot Password</a>
-            <a>Create a new account</a>
+            <a @click="togglePasswordReset()">Forgot Password</a>
+            <a @click="toggleForm()">Create a new account</a>
           </div>
         </form>
         <form v-else
@@ -62,6 +64,7 @@
             <input v-model.trim="signupForm.password"
                    type="password"
                    placeholder="**********"
+                   required
                    id="password2" />
           </div>
           <button @click="signUp()"

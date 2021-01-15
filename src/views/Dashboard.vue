@@ -39,6 +39,7 @@
         <div v-else>
           <p class="no-results">There are currently no posts...</p>
         </div>
+        <br />
       </div>
     </section>
 
