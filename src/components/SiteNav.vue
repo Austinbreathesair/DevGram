@@ -3,7 +3,7 @@
     <section>
       <div class="col1">
         <router-link to="/">
-          <h3>DevGram</h3>
+          <h3>DevBook</h3>
         </router-link>
         <ul class="inline">
           <li>

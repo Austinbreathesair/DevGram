@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="col1">
+      <div class="col2">
         <div v-if="posts.length">
           <div v-for="post in posts"
                :key="post.id"
@@ -31,7 +31,7 @@
             <p>{{ post.content }}</p>
             <ul>
               <li><a @click="toggleCommentModal(post)">Comments {{ post.comments }}</a></li>
-              <li><a @click="likePost(post.id, post.likes)">Likes{{ post.likes }}</a></li>
+              <li><a @click="likePost(post.id, post.likes)">Likes {{ post.likes }}</a></li>
               <li><a @click="viewPost(post)">View full post</a></li>
             </ul>
           </div>
@@ -49,9 +49,9 @@
           <a @click="closePostModal()"
              class="close">Close</a>
           <div class="post">
-            <h5>{{ fullPost>userName }}</h5>
+            <h5>{{ fullPost.userName }}</h5>
             <span>{{ fullPost.createdOn | formatDate }}</span>
-            <p>{{ fullPst.content }}</p>
+            <p>{{ fullPost.content }}</p>
             <ul>
               <li><a>Comments {{ fullPost.comments }}</a></li>
               <li><a>Likes {{ fullPost.likes }}</a></li>
@@ -121,7 +121,7 @@ export default {
       docs.forEach((doc) => {
         let comment = doc.data();
         comment.id = doc.id;
-        this.postCOmments.push(comment);
+        this.postComments.push(comment);
       });
 
       this.fullPost = post;
@@ -130,6 +130,7 @@ export default {
     closePostModal() {
       this.postComments = [];
       this.showCommentModal = false;
+      this.showPostModal = false;
     },
   },
   filters: {

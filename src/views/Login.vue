@@ -4,8 +4,8 @@
                    @close="togglePasswordReset()"></PasswordReset>
     <section>
       <div class="col1">
-        <h1>DevGram</h1>
-        <p>Welcome to DevGram! A sample social media web application powered by Vue.js and Firebase</p>
+        <h1>DevBook</h1>
+        <p>Welcome to DevBook! A sample social media web application where developers can share small snippets of code they found useful. Who knows, it may be just what you're looking for?</p>
       </div>
       <div :class="{ 'signupForm': !showLoginForm }"
            class="col2">
