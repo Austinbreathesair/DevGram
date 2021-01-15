@@ -99,9 +99,26 @@ export default {
       },
       showLoginForm: true,
       showPasswordReset: false,
+      errors: [],
     };
   },
   methods: {
+    checkForm: function (e) {
+      if (this.name && this.age) {
+        return true;
+      }
+
+      this.errors = [];
+
+      if (!this.loginForm.email) {
+        this.errors.push('Name required.');
+      }
+      if (!this.loginForm.password) {
+        this.errors.push('Age required.');
+      }
+
+      e.preventDefault();
+    },
     toggleForm() {
       this.showLoginForm = !this.showLoginForm;
     },
@@ -109,10 +126,19 @@ export default {
       this.showPasswordReset = !this.showPasswordReset;
     },
     login() {
+      this.checkForm;
       this.$store.dispatch('login', {
         email: this.loginForm.email,
         password: this.loginForm.password,
       });
+      this.errors = [];
+
+      if (!this.loginForm.email) {
+        this.errors.push('Email address is required.');
+      }
+      if (!this.loginForm.password) {
+        this.errors.push('Password is required.');
+      }
     },
     signup() {
       this.$store.dispatch('signup', {
