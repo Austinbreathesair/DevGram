@@ -30,9 +30,11 @@
             <span>{{ post.createdOn | formatDate }}</span>
             <p>{{ post.content }}</p>
             <ul>
-              <li><a @click="toggleCommentModal(post)">Comments {{ post.comments }}</a></li>
-              <li><a @click="likePost(post.id, post.likes)">Likes {{ post.likes }}</a></li>
-              <li><a @click="viewPost(post)">View full post</a></li>
+              <li><a @click="toggleCommentModal(post)"><i class="fa fa-comments "></i>
+                  {{ post.comments }}</a></li>
+              <li><a @click="likePost(post.id, post.likes)"><i class="fa fa-thumbs-up"></i> {{ post.likes }}</a></li>
+              <li><a @click="viewPost(post)"
+                   style="align-content: right;">View full post</a></li>
             </ul>
           </div>
         </div>

@@ -67,7 +67,7 @@
                    required
                    id="password2" />
           </div>
-          <button @click="signUp()"
+          <button @click="signup()"
                   class="button">Sign Up</button>
           <div class="extras">
             <a @click="toggleForm()">Back to Log In</a>

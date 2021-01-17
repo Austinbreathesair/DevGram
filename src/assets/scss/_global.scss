@@ -1,21 +1,23 @@
 // imports
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 // colors
-$primary: #30a0ee;
+$primary: #b993d6;
 $error: #ef5777;
 $success: #1abc9c;
 $light: #f5f8fa;
 $medium: #657786;
-$dark: #34495e;
-$white: #fff;
+$dark: #b993d6;
+$white: #2d3134;
 
 // resets
 body {
   margin: 0;
   color: $dark;
-  background: #b993d6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #b993d6, #8ca6db); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #b993d6, #8ca6db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #090e11;
+
+  /*background: #b993d6; /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #b993d6, #8ca6db); /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #b993d6, #8ca6db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 html {
@@ -70,7 +72,9 @@ p {
 a {
   font-family: 'Open Sans', sans-serif;
   text-decoration: none;
-  color: $primary;
+  color: #b993d6; /* fallback for old browsers */
+  color: -webkit-linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%); /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%);
   margin: 0;
   cursor: pointer;
 

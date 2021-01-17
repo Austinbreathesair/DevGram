@@ -7,12 +7,12 @@
         </router-link>
         <ul class="inline">
           <li>
-            <router-link to="/">Dashboard</router-link>
+            <router-link to="/"><strong>Dashboard</strong></router-link>
           </li>
           <li>
-            <router-link to="/settings">Settings</router-link>
+            <router-link to="/settings"><strong>Profile</strong></router-link>
           </li>
-          <li><a @click="logout()">Logout</a></li>
+          <li><a @click="logout()"><strong>Logout</strong></a></li>
         </ul>
       </div>
     </section>

@@ -7,6 +7,9 @@ header {
 
   h3 {
     display: inline-block;
+    color: #b993d6; /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%); /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%);
   }
 
   ul {
@@ -20,6 +23,9 @@ header {
       a {
         display: block;
         padding: 5px;
+        color: #b993d6; /* fallback for old browsers */
+        color: -webkit-linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%); /* Chrome 10-25, Safari 5.1-6 */
+        color: linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%);
       }
     }
   }
@@ -75,6 +81,9 @@ header {
     a {
       color: $white;
       text-decoration: underline;
+      color: #b993d6; /* fallback for old browsers */
+      color: -webkit-linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%); /* Chrome 10-25, Safari 5.1-6 */
+      color: linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%);
     }
   }
 
@@ -94,6 +103,9 @@ header {
     form {
       max-width: 450px;
       margin: 0 auto;
+      color: #b993d6; /* fallback for old browsers */
+      color: -webkit-linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%); /* Chrome 10-25, Safari 5.1-6 */
+      color: linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%);
     }
 
     .extras {
@@ -103,6 +115,9 @@ header {
       a {
         display: block;
         margin-bottom: 0.5rem;
+        color: #b993d6; /* fallback for old browsers */
+        color: -webkit-linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%); /* Chrome 10-25, Safari 5.1-6 */
+        color: linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%);
       }
     }
 
@@ -196,7 +211,7 @@ header {
     }
 
     p {
-      color: $medium;
+      color: $primary;
       margin-bottom: 1rem;
     }
   }
@@ -209,13 +224,20 @@ header {
     textarea {
       height: 200px;
       margin: 0;
+      background: #777777;
+      border-radius: 20px;
+      border: transparent;
+
+      :hover {
+        cursor: text $white;
+      }
     }
 
     .button {
       margin-top: 1rem;
       width: 100%;
       z-index: 5;
-      border-radius: 0 0 3px 3px;
+      border-radius: 20px;
     }
   }
 
@@ -227,7 +249,7 @@ header {
     background: $white;
 
     &:hover {
-      background: #f5f8fa;
+      background: #777777;
       cursor: pointer;
     }
 
@@ -243,18 +265,35 @@ header {
   }
 
   .post {
-    border: 1px solid #e6ecf0;
-    border-bottom: 0;
+    border: 1px solid $primary;
+    /* border-bottom: 1px solid #e6ecf0; */
     font-size: 14px;
     padding: 1.5rem;
     background: $white;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    // $border: 5px;
+    // color: #fff;
+    // background: #000;
+    // background-clip: padding-box; /* !importanté */
+    // border: solid $border transparent; /* !importanté */
+    // border-radius: 1em;
+
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   z-index: -1;
+    //   margin: -$border; /* !importanté */
+    //   border-radius: inherit; /* !importanté */
+    //   background: linear-gradient(to right, red, orange);
+    // }
 
     &:hover {
-      background: #f5f8fa;
-    }
-
-    &:last-of-type {
-      border-bottom: 1px solid $light;
+      background: #777777;
     }
 
     h5 {
@@ -316,6 +355,9 @@ header {
         top: 5px;
         right: 10px;
         padding: 5px;
+        color: #b993d6; /* fallback for old browsers */
+        color: -webkit-linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%); /* Chrome 10-25, Safari 5.1-6 */
+        color: linear-gradient(to right, #b993d6, #8ca6db 50%, $white 50%, $white 100%);
       }
 
       .button {
